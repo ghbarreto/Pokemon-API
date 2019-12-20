@@ -1,0 +1,15 @@
+
+<% for(let i = 0; i < 964; i++) {%>
+    <% let a = info.results[i].url; %>
+    <% if(i < 807){%>
+        <form action="/pokeVal" method="POST">
+            <input type="text "  style="display: none" value="<%= i+1 %>" name="<%= i+1 %>"><%= info.results[i].name %>
+            <input type="submit">
+        </form>
+    <%} else {%>
+        <form action="/pokeVal" method="POST">
+            <input type="text "  style="display: none" value="<%= i+9194 %>" name="<%= i+9194 %>"><%= info.results[i].name %>
+            <input type="submit">
+        </form>
+    <%}%>
+<% } %>

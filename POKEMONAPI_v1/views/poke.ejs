@@ -1,0 +1,27 @@
+
+
+<img src="<%= info.sprites.front_default %>">
+<h1><%= info.name %></h1>
+<p>Height: <%= info.height %></p>
+<h3>Abilities</h3>
+<% let val = info.abilities %>
+<% for(let i in val) { %>
+    <%=  val[i].ability.name%> <br>
+<%}%>
+
+<h3>Types</h3>
+<% let tp = info.types %>
+
+<% for(let i in tp) { %>
+    <%=  tp[i].type.name%> <br>
+<%}%>
+
+<h3>Base Experience</h3>
+<%= info.base_experience %>
+
+<h3>Moves</h3>
+<% let mv = info.moves %>
+
+<% for(let i in mv) { %>
+    <p style="display: inline-block;"><%= mv[i].move.name%></p>
+<%}%>
